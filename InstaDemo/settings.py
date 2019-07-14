@@ -123,3 +123,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIR = [os.path.join(BASE_DIR, 'InstaDemo/static')]
 
 LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'login'

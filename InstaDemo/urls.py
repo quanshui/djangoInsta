@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url, include
-
+from myInsta.views import SignupView
 import os 
 urlpatterns = [
     #path('', HelloDjango.as_view(), name='home'),
@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^myInsta/', include('myInsta.urls')),
     path('', include('myInsta.urls')),
     path('auth/', include('django.contrib.auth.urls')),
-]
+    path('auth/signup', SignupView.as_view(), name='signup'),
+    ]

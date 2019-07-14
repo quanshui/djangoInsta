@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, DetailView 
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.auth.forms import UserCreationForm
 
 from django.urls import reverse_lazy
 
@@ -45,3 +46,8 @@ class PostDeleteView(DeleteView):
     model = Post
     template_name = "delete_post.html"
     success_url = reverse_lazy("home")
+
+class SignupView(CreateView):
+    form_class = UserCreationForm
+    template_name = "signup.html"
+    success_url = reverse_lazy("login")
