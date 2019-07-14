@@ -120,7 +120,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIR = [os.path.join(BASE_DIR, 'InstaDemo/static')]
+STATICFILES_DIR = [os.path.join(BASE_DIR, 'static')]
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'login'
+AUTH_USER_MODEL = 'myInsta.InstaUser'

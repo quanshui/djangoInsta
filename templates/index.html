@@ -1,9 +1,8 @@
-
-{% extends "index.html"%}
+{% extends "base.html"%}
 {% block content %}
 
 <div>
-<a href = "{% url 'make_post' %}">Make Post </a>
+<a class= "logo" href = "{% url 'make_post' %}">Make Post </a>
 </div>
 
 <div>
@@ -15,4 +14,4 @@
     {%endfor %}
 </div>
 
-{% endblock %}
+{% endblock content%}

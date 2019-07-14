@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from myInsta.views import HelloDjango, PostView, PostDetailView 
-from myInsta.views import PostCreateView, PostUpdateView, PostDeleteView
+from myInsta.views import PostCreateView, PostUpdateView, PostDeleteView, SignupView
 from django.urls import path
 urlpatterns = [
     path('', PostView.as_view()),
