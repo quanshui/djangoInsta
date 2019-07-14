@@ -1,0 +1,8 @@
+<h1> Update Post </h1>
+
+<form action="" method="post" > 
+    {% comment %} enctype="multipart/form-data"> not needed for text only change {% endcomment %}
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type = "submit"> </button>
+ </form>
